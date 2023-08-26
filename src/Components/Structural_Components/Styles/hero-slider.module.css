@@ -1,0 +1,13 @@
+.hero {
+    display:flex;
+    background-color: antiquewhite;
+    border:solid;
+    border-color: black;
+    color:black;
+    height:60vh;
+    width:100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}

@@ -1,0 +1,11 @@
+.product-card {
+    border:solid;
+    border-color: black;
+    background-color: antiquewhite;
+    height: 70%;
+    width: 26%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

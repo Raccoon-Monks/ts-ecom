@@ -1,0 +1,10 @@
+.related-products {
+    border:solid;
+    border-color: black;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    background-color: antiquewhite;
+    width: 80vw;
+
+}

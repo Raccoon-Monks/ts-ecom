@@ -1,0 +1,13 @@
+.card {
+    border:solid;
+    border-color: black;
+    display: flex;
+    color:black;
+    background-color: antiquewhite;
+    width: 20vw;
+    height: 20vw;
+    justify-content: center;
+    align-items: center;
+    font-weight:bold;
+
+}

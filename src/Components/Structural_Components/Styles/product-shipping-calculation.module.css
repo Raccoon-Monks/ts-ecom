@@ -1,0 +1,11 @@
+.shipping-calculation {
+    display: flex;
+    border: solid;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    border-color: black;
+    color:black;
+    width:80vw;
+    font-weight: bold;
+}

@@ -1,0 +1,20 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  align-items: center;
+  height: auto;
+  padding:0;
+}
+
+.main section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 1rem;
+  width: 100vw;
+  min-height: 30vh;
+}
+

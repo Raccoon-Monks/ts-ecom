@@ -1,0 +1,11 @@
+.image-gallery-card {
+    border:solid;
+    border-color: black;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    width: 60%;
+    height: 20%;
+}
