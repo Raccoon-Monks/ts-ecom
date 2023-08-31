@@ -14,13 +14,14 @@ export default function Carousel (props: any) {
         left: () => setVisibleItems(visibleItems.map(item => (item - 1)>=0 ? (item-1)%itemsLength : (item-1+itemsLength)%itemsLength)),
         right: () => setVisibleItems(visibleItems.map(item => (item + 1)>=0 ? (item+1)%itemsLength : (item+1+itemsLength)%itemsLength))
     }
+
     return (
         <>
-        <CarouselArrow orientation={"Left"} onClick={arrowClickHandlers.left}/>
-        {visibleItems.map((item,index) => props.type = "product" ? 
-                                          <ProductCarouselCard key={index} item={props.items[item]}/> : 
-                                          <CategoryCarouselCard key={index} item={props.items[item]}/>) }
-        <CarouselArrow orientation={"Right"} onClick={arrowClickHandlers.right}/>
+            <CarouselArrow orientation={"Left"} onClick={arrowClickHandlers.left}/>
+                {visibleItems.map((item,index) => {return (props.type == "product" ? 
+                    <ProductCarouselCard key={index} item={props.items[item]}/> : 
+                    <CategoryCarouselCard key={index} item={props.items[item]}/>)}) }
+            <CarouselArrow orientation={"Right"} onClick={arrowClickHandlers.right}/>
         </>
     )
         

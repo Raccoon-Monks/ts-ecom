@@ -1,5 +1,4 @@
 import styles from './Styles/product-carousel.module.css'
-import ProductCarouselCard from "../Cards/ProductCarouselCard"
 import Carousel from '../Functionality/Carousel'
 
 export default function ProductCarousel () {

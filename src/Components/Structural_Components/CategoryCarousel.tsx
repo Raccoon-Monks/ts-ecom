@@ -1,5 +1,4 @@
 import styles from './Styles/category-carousel.module.css'
-import CategoryCarouselCard from "../Cards/CategoryCarouselCard"
 import Carousel from '../Functionality/Carousel'
 
 export default function CategoryCarousel () {

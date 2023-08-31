@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import styles from './Styles/category-carousel-card.module.css'
 
-export default function ProductCarouselCard(props: any){
+export default function CategoryCarouselCard(props: any){
     return (
-        <Link href="/category/various" className={styles['category-card']}>
+        <Link className={styles['category-card']} href={`/category/${props.item['item_id']}`} >
         <div>
-            CATEGORY CARD
+            {props.item['item_name']}
         </div>
         </Link>
     )
