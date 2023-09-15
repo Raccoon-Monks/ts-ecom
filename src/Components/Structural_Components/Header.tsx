@@ -7,7 +7,7 @@ export default function Header(){
       <div>HEADER</div>
       <nav>
         <ul>
-          <li ><Link href="/" >LOGO/HOME</Link></li>
+          <li><Link href="/" >LOGO/HOME</Link></li>
           <li><Link href="/login">LOGIN</Link></li>
           <li><Link href="/cart">CART</Link></li>
         </ul>
