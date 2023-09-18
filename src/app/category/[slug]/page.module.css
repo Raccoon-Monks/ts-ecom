@@ -46,7 +46,7 @@
 
 .right 
 {
-    border: solid;
+    /* border: solid; */
     flex: 100%;
     display: flex;
     flex-direction: column;

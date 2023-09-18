@@ -1,6 +1,6 @@
 .filters
 {
-    border: solid;
+    /* border: solid; */
     border-color: black;
     display: flex;
     align-items: center;

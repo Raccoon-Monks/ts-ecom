@@ -1,7 +1,7 @@
 .product-list
 {
     display: flex;
-    border: solid;
+    /* border: solid; */
     border-color: black;
     flex-direction: column;
     flex: 100%;

@@ -1,14 +1,17 @@
 .card 
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 1 250px;
     flex-basis: auto;
-    display:inline;
+    /* display:inline; */
     border: solid;
     border-color: black;
     max-width: 250px;
     max-height: 250px;
     min-width: 250px;
     min-height: 250px;
-    text-align: center;
+    /* text-align: center; */
     margin: 10px 10px 10px;
 }

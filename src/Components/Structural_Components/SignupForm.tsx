@@ -8,29 +8,23 @@ export default function LoginForm() {
     const [date, setDate] = useState<Date | null>(new Date());
 
     return (
-        <div className={styles.container}>
+        <div id='Primeiro' className={styles.container}>
             <p>CADASTRO</p>
-            <form>
-                <div>
+            <form className={styles.signup}>
+
                     <label htmlFor="exampleInputName1" >Nome Completo</label>
-                    <input type="password" id="exampleInputPassword1" />
-                </div>
-                <div>
+                    <input type="name" id="exampleInputPassword1" />
+
                     <label htmlFor="exampleInputBirth1" >Data de Nascimento</label>
-                    <div>
-                        <DatePicker selected={date} onChange={(date) => setDate(date)} />
-                    </div>
-                </div>
-                <div>
+                    <DatePicker selected={date} dateFormat="dd/MM/yyyy" onChange={(date) => setDate(date)} />
                     <label htmlFor="exampleInputEmail1">Email</label>
                     <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                </div>
-                <div>
+
                     <label htmlFor="exampleInputPassword1" >Senha</label>
                     <input type="password" id="exampleInputPassword1" />
-                </div>
+
                 <span>
-                    <button type="submit" className={styles.button}>Entrar</button>
+                    <button type="submit" className={styles.button}>CADASTRAR</button>
                 </span>
             </form>
         </div>
