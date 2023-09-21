@@ -7,12 +7,15 @@ import RelatedProducts from '@/Components/Structural_Components/RelatedProducts'
 export default function Home() {
   return (
     <main className={styles.main}>
+      
       <section>
-      <ImageGallery/>
-      <ProductDetails/>
+        <ImageGallery/>
+        <ProductDetails/>
       </section>
+      
       <ProductShippingCalculation/>
       <RelatedProducts/>
+
     </main>
   )
 }
