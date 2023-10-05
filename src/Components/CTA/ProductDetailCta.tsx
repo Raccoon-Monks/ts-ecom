@@ -19,22 +19,20 @@ async function AddToCartStorageItem() {
     let cart
     let matchesItem = [];
     let quantity
-    if (typeof window !== 'undefined') {
-        // Perform localStorage action
-        cart = JSON.parse(localStorage.getItem('cart')!) || []
-      }
+
+    cart = JSON.parse(localStorage.getItem('cart')!) || []
 
     let item = {
         item_name: itemName,
         item_id: itemID,
         quantity: 1
     }
-    if(cart.length !== 0){
+    if (cart.length !== 0) {
 
         matchesItem = cart.filter((item: any) => item.item_id === itemID)
     }
 
-    if(matchesItem.length >= 1){
+    if (matchesItem.length >= 1) {
         quantity = matchesItem[0].quantity
         cart = cart.filter((item: any) => item.item_id !== itemID)
         item.quantity += quantity

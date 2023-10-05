@@ -14,7 +14,7 @@ export default function CartSummary() {
 
     return (
         <div className={styles['cart-summary']}>
-            CART SUMMARY
+            <p className={styles.title}>CART SUMMARY</p>
             <section className={styles.description}>
                 <ul className={styles['item-list']}>
                     <li>Produtos Adicionados</li>

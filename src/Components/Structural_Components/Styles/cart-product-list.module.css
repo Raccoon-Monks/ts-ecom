@@ -8,9 +8,10 @@
     text-align: center;
 }
 
-.div div
+.div p
 {
     margin-top: 10px;
+    font-weight: bold;
 }
 
 .product-list {
@@ -18,4 +19,5 @@
     padding-left: 25vw;
     padding-right: 25vw;
     margin-top: 10px;
+    padding-top: 5px;
 }

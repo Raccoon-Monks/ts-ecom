@@ -30,3 +30,9 @@
     padding: 3px 10px 7px;
     font-size: 11px;
 }
+
+.title
+{
+    margin: 10px;
+    font-weight: bold;
+}

@@ -6,7 +6,7 @@ import CartProducts from '../Functionality/CartProducts'
 export default function CartProductList() {
     return (
         <div className={styles.div}>
-            <div> CART PRODUCT LIST </div>
+            <p className={styles.title}> CART PRODUCT LIST </p>
             <section className={styles['product-list']}>
                 <CartProducts />
             </section>
