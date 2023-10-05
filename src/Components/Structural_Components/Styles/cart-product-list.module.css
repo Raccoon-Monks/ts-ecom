@@ -1,23 +1,35 @@
 .div {
-    /* border: solid; */
+    border: solid;
+    display: flex;
     flex: 100%;
     min-width:100%;
     height: fit-content;
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
 }
 
-.div p
+.title
 {
-    margin-top: 10px;
+    margin-top: 0;
     font-weight: bold;
+    /* border: solid; */
+    height:max-content;
+    flex: 30%;
+    width: 100vw;
+    padding: 20px 10px 10px;
 }
 
 .product-list {
-    border: solid;
+    display: flex;
+    flex-direction: column;
+    /* border: solid; */
+    justify-content: center;
     padding-left: 25vw;
     padding-right: 25vw;
-    margin-top: 10px;
-    padding-top: 5px;
+    margin-top: 0;
+    padding-top: 0px;
+    min-height: 500px;
+    width: 100%;
 }

@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import styles from './Styles/cart-product-list.module.css'
-import CartProductCard from '../Cards/CartProductCard'
 import CartProducts from '../Functionality/CartProducts'
 
 export default function CartProductList() {

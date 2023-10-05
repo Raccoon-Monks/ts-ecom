@@ -5,11 +5,6 @@ import CartCta from '../CTA/CartCta'
 
 export default function CartSummary() {
 
-    // {items.map((item: any) => {
-    //     return (
-    //         <CartProductCard item={item} />
-    //     )
-    // })}
     let items = JSON.parse(localStorage.getItem('cart')!) || []
 
     return (

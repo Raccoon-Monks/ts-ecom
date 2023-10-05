@@ -29,15 +29,20 @@
 }
 
 .description {
+    display: flex;
+    flex-direction: row;
     border: solid;
-    flex: 10;
+    flex-grow: 1;
     margin: 10px 10px 10px;
     padding-left: 30px;
     padding-top: 10px;
     font-size: 12px;
-    align-items: center;
-    max-height: fit-content;
+    align-items: left;
+    max-height: 100px;
+    max-width: 100em;
+    min-width: 300px;
     text-align: left;
+    justify-content: space-between;
 }
 
 .ul
@@ -45,3 +50,29 @@
     margin-top: 5px;
     margin-bottom: 10px;
 }
+
+.remove
+{
+    /* border: solid; */
+    margin: 10px 15px 15px;
+    max-height: fit-content;
+    min-width: fit-content;
+    /* padding: 0; */
+}
+
+.remove-button 
+{
+    border:solid;
+    border-color: black;
+    background-color: antiquewhite;
+    color:black;
+    padding: 1rem;
+    /* margin:1rem; */
+    display:flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* width:15%; */
+    /* height:3rem; */
+    font-weight: bold;
+}
+ 

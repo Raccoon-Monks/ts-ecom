@@ -1,26 +1,38 @@
 'use client'
 
-import Link from 'next/link'
-import styles from './Styles/category-product-card.module.css'
 import CartProductCard from '../Cards/CartProductCard';
-import { useEffect } from 'react';
-
+import styles from './Styles/cart-products.module.css';
 export default function CartProducts(props: any) {
 
-    let items
+    let items;
+
+    if (typeof window !== 'undefined') {
+        // Perform localStorage action
+        items = JSON.parse(window.localStorage.getItem('cart')!) || []
+    }
+
+    if (items.length === 0) {
+        return (
+            <div className={styles.empty}>
+                <p className={styles['empty-title']}>
+                    CARRINHO VAZIO
+                </p>
+            </div>
+        )
+    } else {
+        return (
+            <>
+                {items.map((item: any) => {
+
+                    return (
+                        <CartProductCard item={item} />
+                    )
+
+                })}
+            </>
+        )
+    }
 
 
-    items = JSON.parse(localStorage.getItem('cart')!) || []
-
-
-    return (
-        <>
-            {items.map((item: any) => {
-                return (
-                    <CartProductCard item={item} />
-                )
-            })}
-        </>
-    )
 }
 
