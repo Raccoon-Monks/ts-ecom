@@ -3,7 +3,7 @@
     border: solid;
     border-color: black;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     min-height: 40px;
     flex: 7%;
     margin: 0px 5px 5px;

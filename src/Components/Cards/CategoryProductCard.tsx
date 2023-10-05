@@ -5,7 +5,7 @@ export default function CategoryProductCard(props: any) {
 
     return (
         <Link className={styles.card} href={`/product/${props.item['item_id']}`}>
-            <div>
+            <div className={styles['div-product-name']}>
                 {props.item['item_name']}
             </div>
         </Link>
