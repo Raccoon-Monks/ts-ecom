@@ -15,6 +15,7 @@ export default function CartProductCard(props: any) {
                 <ul className={styles.ul}>
                     <li>{props.item['item_name'].toUpperCase()}</li>
                     <li>Id do produto: {props.item['item_id']}</li>
+                    <li>Quantidade: {props.item.quantity}</li>
                 </ul>
             </div>
         </div>

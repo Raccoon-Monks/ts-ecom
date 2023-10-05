@@ -17,6 +17,16 @@
     border: solid;
     display: flex;
     flex-direction: column;
-    min-width: 500px;
-    min-height: 300px;
+    min-width: 300px;
+    min-height: 120px;
+    max-height: fit-content;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
+}
+
+.item-list ul
+{
+    padding: 3px 10px 7px;
+    font-size: 11px;
 }

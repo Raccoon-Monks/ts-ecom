@@ -8,12 +8,11 @@ import { useEffect } from 'react';
 export default function CartProducts(props: any) {
 
     let items
-    
-    if (typeof window !== 'undefined') {
-        // Perform localStorage action
-        items = JSON.parse(localStorage.getItem('cart')) || []
-      }
-    
+
+
+    items = JSON.parse(localStorage.getItem('cart')!) || []
+
+
     return (
         <>
             {items.map((item: any) => {
