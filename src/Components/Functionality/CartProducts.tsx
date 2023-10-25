@@ -2,13 +2,13 @@
 
 import CartProductCard from '../Cards/CartProductCard';
 import styles from './Styles/cart-products.module.css';
-export default function CartProducts(props: any) {
+export default function CartProducts({ cart, deleteItem }: any) {
 
     let items;
 
     if (typeof window !== 'undefined') {
         // Perform localStorage action
-        items = JSON.parse(window.localStorage.getItem('cart')!) || []
+        items = cart
     }
 
     if (items.length === 0) {
@@ -25,7 +25,7 @@ export default function CartProducts(props: any) {
                 {items.map((item: any) => {
 
                     return (
-                        <CartProductCard item={item} />
+                        <CartProductCard item={item} deleteItem={deleteItem} />
                     )
 
                 })}
