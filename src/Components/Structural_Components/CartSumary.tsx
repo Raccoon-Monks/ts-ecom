@@ -14,9 +14,9 @@ export default function CartSummary() {
                 <ul className={styles['item-list']}>
                     <li>Produtos Adicionados</li>
                     <ul>
-                        {items.map((item: any) => {
+                        {items.map((item: any, i: number) => {
                                 return (
-                                    <li>{item.item_name.toUpperCase()} 
+                                    <li key={i}>{item.item_name.toUpperCase()} 
                                     <br/>x{item.quantity}</li>
                                 )
                             })}
