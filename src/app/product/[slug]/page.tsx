@@ -10,8 +10,6 @@ import RelatedProducts from '@/Components/Structural_Components/RelatedProducts'
 export default function Home() {
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')!) || []);
 
-  console.log(cart)
-
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
@@ -27,9 +25,6 @@ export default function Home() {
       item_id: itemID,
       quantity: quantity,
     };
-
-    console.log("product")
-    console.log(product)
 
     if (cart.length !== 0) {
       matchesItem = cart.filter((item: any) => item.item_id === itemID) || []
@@ -47,9 +42,6 @@ export default function Home() {
         }
       })
 
-      console.log("Manage Cart")
-      console.log(manageCart)
-
       manageCart.push(equalItem[0]);
       setCart(manageCart);
 
@@ -60,7 +52,6 @@ export default function Home() {
           product
         ]
       })
-      console.log(cart)
     }
 
   }

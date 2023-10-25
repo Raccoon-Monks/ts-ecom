@@ -7,19 +7,25 @@ import { useEffect, useState } from 'react';
 
 export default function Home() {
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')!) || []);
+  
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: 'view_cart',
+      currency: 'BRL',
+      value:  10,
+      items: cart,
+    })
+  }, [])
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))
-  },[cart])
-
+  }, [cart]);
+  
   const deleteItem = (id: number) => {
     const cartItemRemoved = cart.filter((item: any) => item.item_id !== id)
     setCart(cartItemRemoved)
   };
-
-  useEffect(() => {
-    console.log("Atualizou carrinho!")
-  }, [cart])
 
   return (
     <main className={styles.main}>
