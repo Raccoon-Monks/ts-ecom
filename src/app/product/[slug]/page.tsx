@@ -59,8 +59,8 @@ export default function Home() {
           ...prevCart,
           product
         ]
-        console.log(cart)
       })
+      console.log(cart)
     }
 
   }

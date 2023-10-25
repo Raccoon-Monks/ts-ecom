@@ -8,18 +8,19 @@ import { useEffect, useState } from 'react';
 export default function Home() {
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')!) || []);
 
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  },[cart])
+
   const deleteItem = (id: number) => {
-    let itemID = id
-
-    setCart(cart.filter((item: any) => item.item_id !== itemID))
-    localStorage.setItem('cart',JSON.stringify(cart))
-
-    console.log(cart)
+    const cartItemRemoved = cart.filter((item: any) => item.item_id !== id)
+    setCart(cartItemRemoved)
   };
 
   useEffect(() => {
     console.log("Atualizou carrinho!")
   }, [cart])
+
   return (
     <main className={styles.main}>
       <div className={styles.container}>

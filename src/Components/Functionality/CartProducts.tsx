@@ -22,10 +22,10 @@ export default function CartProducts({ cart, deleteItem }: any) {
     } else {
         return (
             <>
-                {items.map((item: any) => {
+                {items.map((item: any, i: any) => {
 
                     return (
-                        <CartProductCard item={item} deleteItem={deleteItem} />
+                        <CartProductCard key={i} item={item} deleteItem={deleteItem} />
                     )
 
                 })}
