@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import styles from './Styles/cart-product-card.module.css'
 
@@ -30,13 +28,4 @@ export default function CartProductCard({item, deleteItem}: any) {
             </div>
         </div>
     )
-}
-
-async function removeFromCart(id: number) {
-    let itemID = id
-    let cart = JSON.parse(localStorage.getItem('cart')!)
-
-    cart = cart.filter((item: any) => item.item_id !== itemID)
-
-    localStorage.setItem('cart',JSON.stringify(cart))
 }

@@ -8,7 +8,12 @@ import styles from './page.module.css'
 import RelatedProducts from '@/Components/Structural_Components/RelatedProducts'
 
 export default function Home() {
-  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')!) || []);
+  let cartData;
+  if (typeof window !== 'undefined') {
+    cartData = JSON.parse(localStorage.getItem('cart')!) || [];
+  }
+  
+  const [cart, setCart] = useState(cartData);
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))

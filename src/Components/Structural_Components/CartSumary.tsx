@@ -3,9 +3,9 @@ import Link from 'next/link'
 import styles from './Styles/cart-summary.module.css'
 import CartCta from '../CTA/CartCta'
 
-export default function CartSummary() {
+export default function CartSummary({ cart }: any) {
 
-    let items = JSON.parse(localStorage.getItem('cart')!) || []
+    let items = cart
 
     return (
         <div className={styles['cart-summary']}>
@@ -15,11 +15,11 @@ export default function CartSummary() {
                     <li>Produtos Adicionados</li>
                     <ul>
                         {items.map((item: any, i: number) => {
-                                return (
-                                    <li key={i}>{item.item_name.toUpperCase()} 
-                                    <br/>x{item.quantity}</li>
-                                )
-                            })}
+                            return (
+                                <li key={i}>{item.item_name.toUpperCase()}
+                                    <br />x{item.quantity}</li>
+                            )
+                        })}
                     </ul>
                     <li>Valor Total</li>
                 </ul>

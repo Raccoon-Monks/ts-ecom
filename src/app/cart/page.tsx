@@ -6,7 +6,11 @@ import CartSummary from '@/Components/Structural_Components/CartSumary'
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')!) || []);
+  let cartData;
+  if (typeof window !== 'undefined') {
+    cartData = JSON.parse(localStorage.getItem('cart')!) || [];
+  }
+  const [cart, setCart] = useState(cartData);
   
   useEffect(() => {
     window.dataLayer = window.dataLayer || []
@@ -31,7 +35,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.container}>
         <CartProductList cart={cart} deleteItem={deleteItem} />
-        <CartSummary />
+        <CartSummary cart={cart} />
       </div>
     </main>
   )

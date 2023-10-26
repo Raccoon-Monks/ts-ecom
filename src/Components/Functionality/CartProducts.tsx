@@ -1,17 +1,7 @@
-'use client'
-
 import CartProductCard from '../Cards/CartProductCard';
 import styles from './Styles/cart-products.module.css';
 export default function CartProducts({ cart, deleteItem }: any) {
-
-    let items;
-
-    if (typeof window !== 'undefined') {
-        // Perform localStorage action
-        items = cart
-    }
-
-    if (items.length === 0) {
+    if (cart.length === 0) {
         return (
             <div className={styles.empty}>
                 <p className={styles['empty-title']}>
@@ -22,7 +12,7 @@ export default function CartProducts({ cart, deleteItem }: any) {
     } else {
         return (
             <>
-                {items.map((item: any, i: any) => {
+                {cart.map((item: any, i: any) => {
 
                     return (
                         <CartProductCard key={i} item={item} deleteItem={deleteItem} />
