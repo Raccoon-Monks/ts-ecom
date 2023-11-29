@@ -12,6 +12,9 @@
     max-height: 250px;
     min-width: 250px;
     min-height: 250px;
-    /* text-align: center; */
     margin: 10px 10px 10px;
+}
+.div-product-name{
+    align-items: center;
+    justify-content: center;
 }

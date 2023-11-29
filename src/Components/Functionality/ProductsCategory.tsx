@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import styles from './Styles/category-product-card.module.css'
 import CategoryProductCard from '../Cards/CategoryProductCard';
 
 export default function ProductsCategory(props: any) {
@@ -8,9 +6,9 @@ export default function ProductsCategory(props: any) {
 
     return (
         <>
-            {items.map((item: any) => {
+            {items.map((item: any, i: number) => {
                 return (
-                    <CategoryProductCard item={item} />
+                    <CategoryProductCard key={i} item={item} />
                 )
             })}
         </>
