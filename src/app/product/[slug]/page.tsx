@@ -19,7 +19,7 @@ export default function Home() {
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
 
-  const addToCartFunction = () => {
+  const handleAddToCart = () => {
     // setCart(JSON.parse(localStorage.getItem('cart')!) || [])
     const itemName = location.pathname.replace(/\//g, " ").replace(/ /, "")
     const itemID = itemName.split(' ')[1]
@@ -66,8 +66,7 @@ export default function Home() {
 
       <section>
         <ImageGallery />
-        <ProductDetails addToCartFunction={addToCartFunction} />
-        <button onClick={addToCartFunction}>Clique aqui para testar função</button>
+        <ProductDetails addToCartFunction={handleAddToCart} />
       </section>
 
       <ProductShippingCalculation />

@@ -5,24 +5,30 @@ import CartCta from '../CTA/CartCta'
 
 export default function CartSummary({ cart }: any) {
 
-    let items = cart
-
     return (
         <div className={styles['cart-summary']}>
             <p className={styles.title}>CART SUMMARY</p>
             <section className={styles.description}>
-                <ul className={styles['item-list']}>
-                    <li>Produtos Adicionados</li>
-                    <ul>
-                        {items.map((item: any, i: number) => {
-                            return (
-                                <li key={i}>{item.item_name.toUpperCase()}
-                                    <br />x{item.quantity}</li>
-                            )
-                        })}
+                {cart.length > 0 ? (
+
+                    <ul className={styles['item-list']}>
+                        <li>Produtos Adicionados</li>
+                        <ul>
+                            {cart.map((item: any, i: number) => {
+                                return (
+                                    <li key={i}>{item.item_name.toUpperCase()}
+                                        <br />x{item.quantity}</li>
+                                )
+                            })}
+                        </ul>
+                        <li>Valor Total</li>
                     </ul>
-                    <li>Valor Total</li>
-                </ul>
+                ) : (
+                    <div className={styles.empty_cart_summary}>
+                        <h3>Carrinho vazio</h3>
+                    </div>
+                )
+                }
             </section>
             <CartCta />
         </div>

@@ -15,7 +15,9 @@ export default function CartProducts({ cart, deleteItem }: any) {
                 {cart.map((item: any, i: any) => {
 
                     return (
-                        <CartProductCard key={i} item={item} deleteItem={deleteItem} />
+                        <div className={styles.container}>
+                            <CartProductCard key={i} item={item} deleteItem={deleteItem} />
+                        </div>
                     )
 
                 })}
