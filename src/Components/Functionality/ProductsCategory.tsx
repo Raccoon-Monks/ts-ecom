@@ -1,14 +1,12 @@
 import CategoryProductCard from '../Cards/CategoryProductCard';
 
-export default function ProductsCategory(props: any) {
-
-    let items = props?.items
+export default function ProductsCategory({ products }: any) {
 
     return (
         <>
-            {items.map((item: any, i: number) => {
+            {products.map((prod: any) => {
                 return (
-                    <CategoryProductCard key={i} item={item} />
+                    <CategoryProductCard key={prod.id} item={prod} />
                 )
             })}
         </>
